@@ -1,0 +1,112 @@
+Se você quiser, posso te ensinar passo a passo a subir essas duas versões no GitHub:
+
+index_editavel.html na branch main (só você edita)
+
+index.html na branch gh-pages (público só leitura)
+
+Quer que eu faça isso agora?
+
+Você disse:
+sim, seria otimo
+O ChatGPT disse:
+
+Perfeito! 😄 Vamos organizar passo a passo para você ter uma versão editável só sua e uma versão pública somente leitura no GitHub Pages.
+
+Passo 1 – Crie o repositório no GitHub
+
+Entre no GitHub e clique em “New repository”.
+
+Nomeie, por exemplo: Grupo-Senzala.
+
+Deixe como Público ou Privado (você decide).
+
+Marque “Add a README file” e clique em Create repository.
+
+Passo 2 – Configure a estrutura de pastas local
+
+No seu computador, crie a seguinte estrutura:
+
+Grupo-Senzala/
+├── index_editavel.html
+├── videos/
+│   ├── video1.mp4
+│   └── video2.mp4
+├── eventos/
+│   ├── banner.jpg
+│   ├── roda1.jpg
+│   ├── roda2.jpg
+│   ├── treino1.jpg
+│   └── treino2.jpg
+└── responsaveis/
+    ├── mestre_carlos.jpg
+    └── mestre_maria.jpg
+
+
+Dica: coloque todas as fotos e vídeos corretos dentro dessas pastas.
+
+Passo 3 – Suba a versão editável para a branch main
+
+Abra o terminal ou Git Bash na pasta do projeto.
+
+Inicialize o Git:
+
+git init
+git add .
+git commit -m "Versão editável do site"
+
+
+Conecte ao repositório remoto:
+
+git remote add origin https://github.com/SEU-USUARIO/Grupo-Senzala.git
+git branch -M main
+git push -u origin main
+
+
+Agora a versão editável (index_editavel.html) está no GitHub, só você pode editar.
+
+Passo 4 – Criar a branch pública gh-pages
+
+Crie a branch para o site público:
+
+git checkout -b gh-pages
+
+
+Copie o arquivo somente leitura para essa branch:
+
+cp index.html index.html
+
+
+(Se você estiver no Windows, apenas arraste/copiar o arquivo index.html na pasta do projeto)
+
+Commit e push:
+
+git add index.html
+git commit -m "Versão pública somente leitura"
+git push -u origin gh-pages
+
+Passo 5 – Ativar GitHub Pages
+
+Vá no GitHub, no repositório.
+
+Clique em Settings → Pages.
+
+Em Branch, selecione gh-pages e a pasta / (root).
+
+Clique em Save.
+
+O GitHub vai gerar um link, algo como:
+
+https://SEU-USUARIO.github.io/Grupo-Senzala/
+
+
+Agora o público só consegue ver a versão somente leitura, com fotos clicáveis e vídeos.
+
+Resumo
+
+main → versão editável, só você tem acesso
+
+gh-pages → versão pública, somente leitura
+
+Fotos de eventos clicáveis, vídeos assistíveis, cores harmoniosas
+
+Você pode atualizar a branch gh-pages sempre que quiser refletir alterações da versão editável
